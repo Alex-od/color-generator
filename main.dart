@@ -1,10 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(ColorGenApp());
 
-class MyApp extends StatelessWidget {
-  
+class ColorGenApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,22 +11,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue, //toolbar
       ),
-      home: AlexHomePage(),
+      home: ColorGenHomePage(),
     );
   }
 }
 
-class AlexHomePage extends StatefulWidget {
-  AlexHomePage({Key key}) : super(key: key);
+class ColorGenHomePage extends StatefulWidget {
+  ColorGenHomePage({Key key}) : super(key: key);
 
   @override
-  _AlexHomePageState createState() => new _AlexHomePageState();
+  _ColorGenHomePageState createState() => new _ColorGenHomePageState();
 }
 
-class _AlexHomePageState extends State<AlexHomePage> {
+class _ColorGenHomePageState extends State<ColorGenHomePage> {
   Random random = new Random();
 
-  Color randomColor = Colors.green;// init first color
+  Color randomColor = Colors.green; // init first color
 
   void _onTap() {
     setState(() => randomColor =
@@ -41,7 +40,7 @@ class _AlexHomePageState extends State<AlexHomePage> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 500),
         color: randomColor,
-        child: Center(child: PrimaryTextView("Hey there!")),
+        child: Center(child: HelloTextView("Hey there!")),
       ),
     );
 
@@ -56,10 +55,10 @@ class _AlexHomePageState extends State<AlexHomePage> {
   }
 }
 
-class PrimaryTextView extends StatelessWidget {
+class HelloTextView extends StatelessWidget {
   final String text;
 
-  PrimaryTextView(this.text);
+  HelloTextView(this.text);
 
   @override
   Widget build(BuildContext context) {
