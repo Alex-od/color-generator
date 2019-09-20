@@ -7,7 +7,7 @@ class ColorGenApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Alex app',
+      title: 'Color generator app',
       theme: ThemeData(
         primarySwatch: Colors.blue, //toolbar
       ),
@@ -35,7 +35,7 @@ class _ColorGenHomePageState extends State<ColorGenHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Widget redSection = new GestureDetector(
+    Widget clickedSection = new GestureDetector(
       onTap: _onTap,
       child: AnimatedContainer(
         duration: Duration(milliseconds: 500),
@@ -49,7 +49,7 @@ class _ColorGenHomePageState extends State<ColorGenHomePage> {
         title: new Text("Color generator app"),
       ),
       body: Container(
-        child: redSection,
+        child: clickedSection,
       ),
     );
   }
