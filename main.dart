@@ -35,7 +35,7 @@ class _ColorGenHomePageState extends State<ColorGenHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Widget clickedSection = new GestureDetector(
+    Widget clickableSection = new GestureDetector(
       onTap: _onTap,
       child: AnimatedContainer(
         duration: Duration(milliseconds: 500),
@@ -49,7 +49,7 @@ class _ColorGenHomePageState extends State<ColorGenHomePage> {
         title: new Text("Color generator app"),
       ),
       body: Container(
-        child: clickedSection,
+        child: clickableSection,
       ),
     );
   }
